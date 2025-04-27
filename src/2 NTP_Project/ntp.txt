@@ -1,0 +1,7 @@
+Какой протокол 4 уровня используется (UDP).
+
+Какие source и destination порты (оба — 123).
+
+Значение Transmit timestamp из первого пакета:
+    Transmit Timestamp: Mar  1, 2002 00:06:52.028732242 UTC
+

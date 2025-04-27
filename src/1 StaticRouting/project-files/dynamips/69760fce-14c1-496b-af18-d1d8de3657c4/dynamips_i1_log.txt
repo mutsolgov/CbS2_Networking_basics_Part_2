@@ -1,0 +1,45 @@
+Apr 17 11:20:56.240 HYPERVISOR: Release 0.2.23-amd64/Linux (tag 2023010200)
+Apr 17 11:20:56.240 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 43683.
+Apr 17 11:20:56.250 HYPERVISOR: exec_cmd: hypervisor version 
+Apr 17 11:20:56.251 HYPERVISOR: exec_cmd: hypervisor working_dir /home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/StaticRouting/project-files/dynamips 
+Apr 17 11:20:56.251 GENERAL: working_dir=/home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/StaticRouting/project-files/dynamips
+Apr 17 11:20:56.251 HYPERVISOR: exec_cmd: hypervisor working_dir /home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/StaticRouting/project-files/dynamips/69760fce-14c1-496b-af18-d1d8de3657c4 
+Apr 17 11:20:56.251 GENERAL: working_dir=/home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/StaticRouting/project-files/dynamips/69760fce-14c1-496b-af18-d1d8de3657c4
+Apr 17 11:20:56.252 HYPERVISOR: exec_cmd: vm create R1 1 c3745 
+Apr 17 11:20:56.252 VM: VM R1 created.
+Apr 17 11:20:56.253 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 5000 
+Apr 17 11:20:56.253 HYPERVISOR: exec_cmd: c3745 get_mac_addr R1 
+Apr 17 11:20:56.254 HYPERVISOR: exec_cmd: vm set_disk0 R1 0 
+Apr 17 11:20:56.255 HYPERVISOR: exec_cmd: vm set_ios R1 /home/muhammad/GNS3/images/IOS/c3745-adventerprisek9-mz.124-25.image 
+Apr 17 11:20:56.256 HYPERVISOR: exec_cmd: c3745 set_mac_addr R1 c401.38e0.0000 
+Apr 17 11:20:56.257 HYPERVISOR: exec_cmd: vm set_nvram R1 256 
+Apr 17 11:20:56.258 HYPERVISOR: exec_cmd: vm set_ram R1 256 
+Apr 17 11:20:56.406 HYPERVISOR: exec_cmd: nio create_udp udp-48c2a01e-538f-41ad-8e0d-c7778c48dae8 10002 127.0.0.1 10003 
+Apr 17 11:20:56.620 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 0 udp-48c2a01e-538f-41ad-8e0d-c7778c48dae8 
+Apr 17 11:20:56.621 HYPERVISOR: exec_cmd: vm get_status R1 
+Apr 17 11:21:00.865 HYPERVISOR: exec_cmd: vm create Ghost 0 c3745 
+Apr 17 11:21:00.865 VM: VM Ghost created.
+Apr 17 11:21:00.867 HYPERVISOR: exec_cmd: vm set_ios Ghost /home/muhammad/GNS3/images/IOS/c3745-adventerprisek9-mz.124-25.image 
+Apr 17 11:21:00.868 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Apr 17 11:21:00.869 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost /home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/StaticRouting/project-files/dynamips/c3745-adventerprisek9-mz.124-25.image-256.ghost 
+Apr 17 11:21:00.869 HYPERVISOR: exec_cmd: vm set_ram Ghost 256 
+Apr 17 11:21:00.870 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Apr 17 11:21:00.870 HYPERVISOR: exec_cmd: vm set_config Ghost configs/i0_startup-config.cfg 
+Apr 17 11:21:00.870 HYPERVISOR: exec_cmd: vm start Ghost 
+Apr 17 11:21:01.261 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Apr 17 11:21:01.263 HYPERVISOR: exec_cmd: vm stop Ghost 
+Apr 17 11:21:01.317 VM: VM Ghost shutdown.
+Apr 17 11:21:01.318 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+Apr 17 11:21:01.320 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Apr 17 11:21:01.320 VM: VM Ghost destroyed.
+Apr 17 11:21:01.323 HYPERVISOR: exec_cmd: vm set_ghost_status R1 2 
+Apr 17 11:21:01.324 HYPERVISOR: exec_cmd: vm set_ghost_file R1 /home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/StaticRouting/project-files/dynamips/c3745-adventerprisek9-mz.124-25.image-256.ghost 
+Apr 17 11:21:01.325 HYPERVISOR: exec_cmd: vm get_status R1 
+Apr 17 11:21:01.327 HYPERVISOR: exec_cmd: vm set_config R1 configs/i1_startup-config.cfg 
+Apr 17 11:21:01.328 HYPERVISOR: exec_cmd: vm start R1 
+Apr 17 11:21:15.086 HYPERVISOR: exec_cmd: nio bind_filter udp-48c2a01e-538f-41ad-8e0d-c7778c48dae8 2 capture 
+Apr 17 11:21:15.087 HYPERVISOR: exec_cmd: nio setup_filter udp-48c2a01e-538f-41ad-8e0d-c7778c48dae8 2 en10mb /home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/StaticRouting/project-files/captures/R1_FastEthernet00_to_R2_FastEthernet00.pcap 
+Apr 17 11:22:16.982 HYPERVISOR: Stopped.
+Apr 17 11:22:17.053 VM: VM R1 shutdown.
+Apr 17 11:22:17.053 VM: VM R1 destroyed.
+Apr 17 11:22:17.053 GENERAL: reset done.

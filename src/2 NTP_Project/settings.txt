@@ -1,0 +1,57 @@
+R1:
+    enable
+    configure terminal
+    hostname R1
+    interface FastEthernet0/0
+        ip address 10.0.0.1 255.255.255.0
+        no shutdown
+    exit
+    end
+    write memory
+
+
+R2:
+    enable
+    configure terminal
+    hostname R2
+    interface FastEthernet0/0
+        ip address 10.0.0.2 255.255.255.0
+        no shutdown
+    exit
+    end
+    write memory
+
+
+Настройка NTP-сервера (R1)
+    enable
+    configure terminal
+    clock timezone MSK 3
+    ntp master 1
+    end
+
+        ntp master 1 — делает R1 NTP-сервером уровня stratum 1 (искусственно).
+        clock timezone — не обязательный, просто чтобы показать, что можно указать смещение по времени.
+
+
+Установка заведомо неправильного времени на клиенте (R2)
+    enable
+    configure terminal
+    clock set 01:01:01 1 JAN 2020
+    end
+
+Настройка клиента на синхронизацию с R1
+R2
+    configure terminal
+    ntp server 10.0.0.1
+    end
+
+
+Убедись, что синхронизация прошла успешно
+На R2 введи команду:
+    show ntp associations
+        Если всё настроено правильно, ты увидишь что-то вроде:
+
+        address         ref clock       st   when   poll reach  delay  offset    disp
+    *~10.0.0.1         127.127.7.1      1     34     64   377    0.2     1.2      0.4
+А * перед адресом означает, что сервер выбран как основной источник времени.
+

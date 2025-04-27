@@ -1,0 +1,24 @@
+Apr 22 15:43:23.015 HYPERVISOR: Release 0.2.23-amd64/Linux (tag 2023010200)
+Apr 22 15:43:23.015 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 50289.
+Apr 22 15:43:23.023 HYPERVISOR: exec_cmd: hypervisor version 
+Apr 22 15:43:23.023 HYPERVISOR: exec_cmd: hypervisor working_dir /home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/3 DNS-SERVER/project-files/dynamips 
+Apr 22 15:43:23.023 GENERAL: working_dir=/home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/3 DNS-SERVER/project-files/dynamips
+Apr 22 15:43:23.023 HYPERVISOR: exec_cmd: hypervisor working_dir /home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/3 DNS-SERVER/project-files/dynamips/7b37b980-c8d9-4b0b-b2e7-53668f04043d 
+Apr 22 15:43:23.023 GENERAL: working_dir=/home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/3 DNS-SERVER/project-files/dynamips/7b37b980-c8d9-4b0b-b2e7-53668f04043d
+Apr 22 15:43:23.023 HYPERVISOR: exec_cmd: vm create R2 2 c3745 
+Apr 22 15:43:23.023 VM: VM R2 created.
+Apr 22 15:43:23.024 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 5001 
+Apr 22 15:43:23.024 HYPERVISOR: exec_cmd: c3745 get_mac_addr R2 
+Apr 22 15:43:23.024 HYPERVISOR: exec_cmd: vm set_disk0 R2 0 
+Apr 22 15:43:23.025 HYPERVISOR: exec_cmd: vm set_ios R2 /home/muhammad/GNS3/images/IOS/c3745-adventerprisek9-mz.124-25.image 
+Apr 22 15:43:23.025 HYPERVISOR: exec_cmd: c3745 set_mac_addr R2 c402.4676.0000 
+Apr 22 15:43:23.025 HYPERVISOR: exec_cmd: vm set_nvram R2 256 
+Apr 22 15:43:23.026 HYPERVISOR: exec_cmd: vm set_ram R2 256 
+Apr 22 15:43:23.312 HYPERVISOR: exec_cmd: nio create_udp udp-e5c87f23-290d-4702-8b9e-6480340483d3 10004 127.0.0.1 10005 
+Apr 22 15:43:23.529 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 0 udp-e5c87f23-290d-4702-8b9e-6480340483d3 
+Apr 22 15:43:23.530 HYPERVISOR: exec_cmd: vm get_status R2 
+Apr 22 15:43:26.996 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Apr 22 15:43:26.999 HYPERVISOR: exec_cmd: vm set_ghost_file R2 /home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/3 DNS-SERVER/project-files/dynamips/c3745-adventerprisek9-mz.124-25.image-256.ghost 
+Apr 22 15:43:26.999 HYPERVISOR: exec_cmd: vm get_status R2 
+Apr 22 15:43:27.000 HYPERVISOR: exec_cmd: vm set_config R2 configs/i2_startup-config.cfg 
+Apr 22 15:43:27.000 HYPERVISOR: exec_cmd: vm start R2 

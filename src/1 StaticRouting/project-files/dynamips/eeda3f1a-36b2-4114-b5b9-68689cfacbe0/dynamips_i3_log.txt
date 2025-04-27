@@ -1,0 +1,28 @@
+Apr 17 11:20:56.331 HYPERVISOR: Release 0.2.23-amd64/Linux (tag 2023010200)
+Apr 17 11:20:56.331 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 36653.
+Apr 17 11:20:56.338 HYPERVISOR: exec_cmd: hypervisor version 
+Apr 17 11:20:56.338 HYPERVISOR: exec_cmd: hypervisor working_dir /home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/StaticRouting/project-files/dynamips 
+Apr 17 11:20:56.338 GENERAL: working_dir=/home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/StaticRouting/project-files/dynamips
+Apr 17 11:20:56.339 HYPERVISOR: exec_cmd: hypervisor working_dir /home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/StaticRouting/project-files/dynamips/eeda3f1a-36b2-4114-b5b9-68689cfacbe0 
+Apr 17 11:20:56.339 GENERAL: working_dir=/home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/StaticRouting/project-files/dynamips/eeda3f1a-36b2-4114-b5b9-68689cfacbe0
+Apr 17 11:20:56.339 HYPERVISOR: exec_cmd: vm create R3 3 c3745 
+Apr 17 11:20:56.339 VM: VM R3 created.
+Apr 17 11:20:56.339 HYPERVISOR: exec_cmd: vm set_con_tcp_port R3 5002 
+Apr 17 11:20:56.339 HYPERVISOR: exec_cmd: c3745 get_mac_addr R3 
+Apr 17 11:20:56.340 HYPERVISOR: exec_cmd: vm set_disk0 R3 0 
+Apr 17 11:20:56.340 HYPERVISOR: exec_cmd: vm set_ios R3 /home/muhammad/GNS3/images/IOS/c3745-adventerprisek9-mz.124-25.image 
+Apr 17 11:20:56.341 HYPERVISOR: exec_cmd: c3745 set_mac_addr R3 c403.3932.0000 
+Apr 17 11:20:56.341 HYPERVISOR: exec_cmd: vm set_nvram R3 256 
+Apr 17 11:20:56.341 HYPERVISOR: exec_cmd: vm set_ram R3 256 
+Apr 17 11:20:56.959 HYPERVISOR: exec_cmd: nio create_udp udp-e5aac345-09bc-49d2-aba6-5ac94aca6b02 10010 127.0.0.1 10011 
+Apr 17 11:20:57.171 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 0 0 udp-e5aac345-09bc-49d2-aba6-5ac94aca6b02 
+Apr 17 11:20:57.172 HYPERVISOR: exec_cmd: vm get_status R3 
+Apr 17 11:21:01.329 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Apr 17 11:21:01.330 HYPERVISOR: exec_cmd: vm set_ghost_file R3 /home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/StaticRouting/project-files/dynamips/c3745-adventerprisek9-mz.124-25.image-256.ghost 
+Apr 17 11:21:01.331 HYPERVISOR: exec_cmd: vm get_status R3 
+Apr 17 11:21:01.332 HYPERVISOR: exec_cmd: vm set_config R3 configs/i3_startup-config.cfg 
+Apr 17 11:21:01.332 HYPERVISOR: exec_cmd: vm start R3 
+Apr 17 11:22:16.982 HYPERVISOR: Stopped.
+Apr 17 11:22:17.044 VM: VM R3 shutdown.
+Apr 17 11:22:17.044 VM: VM R3 destroyed.
+Apr 17 11:22:17.044 GENERAL: reset done.

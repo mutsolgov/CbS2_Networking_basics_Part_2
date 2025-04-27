@@ -1,0 +1,39 @@
+Apr 22 15:43:22.942 HYPERVISOR: Release 0.2.23-amd64/Linux (tag 2023010200)
+Apr 22 15:43:22.942 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 50795.
+Apr 22 15:43:22.949 HYPERVISOR: exec_cmd: hypervisor version 
+Apr 22 15:43:22.950 HYPERVISOR: exec_cmd: hypervisor working_dir /home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/3 DNS-SERVER/project-files/dynamips 
+Apr 22 15:43:22.950 GENERAL: working_dir=/home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/3 DNS-SERVER/project-files/dynamips
+Apr 22 15:43:22.951 HYPERVISOR: exec_cmd: hypervisor working_dir /home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/3 DNS-SERVER/project-files/dynamips/a7c08960-d772-4e26-b8d0-e70446af9091 
+Apr 22 15:43:22.951 GENERAL: working_dir=/home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/3 DNS-SERVER/project-files/dynamips/a7c08960-d772-4e26-b8d0-e70446af9091
+Apr 22 15:43:22.952 HYPERVISOR: exec_cmd: vm create R1 1 c3745 
+Apr 22 15:43:22.952 VM: VM R1 created.
+Apr 22 15:43:22.953 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 5000 
+Apr 22 15:43:22.954 HYPERVISOR: exec_cmd: c3745 get_mac_addr R1 
+Apr 22 15:43:22.955 HYPERVISOR: exec_cmd: vm set_disk0 R1 0 
+Apr 22 15:43:22.958 HYPERVISOR: exec_cmd: vm set_ios R1 /home/muhammad/GNS3/images/IOS/c3745-adventerprisek9-mz.124-25.image 
+Apr 22 15:43:22.959 HYPERVISOR: exec_cmd: c3745 set_mac_addr R1 c401.4658.0000 
+Apr 22 15:43:22.960 HYPERVISOR: exec_cmd: vm set_nvram R1 256 
+Apr 22 15:43:22.961 HYPERVISOR: exec_cmd: vm set_ram R1 256 
+Apr 22 15:43:23.082 HYPERVISOR: exec_cmd: nio create_udp udp-fd6af001-18c6-4ab1-8ace-0992a7506e79 10002 127.0.0.1 10003 
+Apr 22 15:43:23.293 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 0 udp-fd6af001-18c6-4ab1-8ace-0992a7506e79 
+Apr 22 15:43:23.294 HYPERVISOR: exec_cmd: vm get_status R1 
+Apr 22 15:43:26.527 HYPERVISOR: exec_cmd: vm create Ghost 0 c3745 
+Apr 22 15:43:26.527 VM: VM Ghost created.
+Apr 22 15:43:26.529 HYPERVISOR: exec_cmd: vm set_ios Ghost /home/muhammad/GNS3/images/IOS/c3745-adventerprisek9-mz.124-25.image 
+Apr 22 15:43:26.530 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Apr 22 15:43:26.531 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost /home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/3 DNS-SERVER/project-files/dynamips/c3745-adventerprisek9-mz.124-25.image-256.ghost 
+Apr 22 15:43:26.532 HYPERVISOR: exec_cmd: vm set_ram Ghost 256 
+Apr 22 15:43:26.533 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Apr 22 15:43:26.534 HYPERVISOR: exec_cmd: vm set_config Ghost configs/i0_startup-config.cfg 
+Apr 22 15:43:26.535 HYPERVISOR: exec_cmd: vm start Ghost 
+Apr 22 15:43:26.931 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Apr 22 15:43:26.933 HYPERVISOR: exec_cmd: vm stop Ghost 
+Apr 22 15:43:26.987 VM: VM Ghost shutdown.
+Apr 22 15:43:26.988 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+Apr 22 15:43:26.990 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Apr 22 15:43:26.990 VM: VM Ghost destroyed.
+Apr 22 15:43:26.994 HYPERVISOR: exec_cmd: vm set_ghost_status R1 2 
+Apr 22 15:43:26.995 HYPERVISOR: exec_cmd: vm set_ghost_file R1 /home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/3 DNS-SERVER/project-files/dynamips/c3745-adventerprisek9-mz.124-25.image-256.ghost 
+Apr 22 15:43:26.996 HYPERVISOR: exec_cmd: vm get_status R1 
+Apr 22 15:43:26.998 HYPERVISOR: exec_cmd: vm set_config R1 configs/i1_startup-config.cfg 
+Apr 22 15:43:26.999 HYPERVISOR: exec_cmd: vm start R1 

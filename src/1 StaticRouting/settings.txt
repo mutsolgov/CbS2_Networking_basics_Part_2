@@ -1,0 +1,80 @@
+Конфигурация R1
+Откройте консоль R1 и введите:
+    enable
+    configure terminal
+    hostname R1
+    interface FastEthernet0/0
+        ip address 10.10.10.1 255.255.255.0
+        no shutdown
+    exit
+    end
+    write memory
+
+        Что происходит:
+        ip address ... — назначаем IP‑адрес в сети 10.10.10.0/24.
+        no shutdown — включаем интерфейс (по умолчанию он «выключен»).
+
+
+Конфигурация R2
+В консоли R2:
+    enable
+    configure terminal
+    hostname R2
+    interface FastEthernet0/0
+        ip address 10.10.10.2 255.255.255.0
+        no shutdown
+    exit
+    interface FastEthernet0/1
+        ip address 10.10.20.1 255.255.255.0
+        no shutdown
+    exit
+    end
+    write memory
+
+
+Конфигурация R3
+В консоли R3:
+    enable
+    configure terminal
+    hostname R3
+    interface FastEthernet0/0
+        ip address 10.10.20.2 255.255.255.0
+        no shutdown
+    exit
+    end
+    write memory
+
+
+Проверка прямой связности
+На R1 выполните ping 10.10.10.2 → ответ должен приходить.
+На R3 выполните ping 10.10.20.1 → ответ приходит.
+
+
+
+3. Настройка статических маршрутов
+Маршрутизатору R1 нужно «знать», как доставить пакеты в сеть 10.10.20.0/24, и наоборот — R3 должен знать, как вернуться в сеть 10.10.10.0/24.
+
+На R1:
+    enable
+    configure terminal
+    ip route 10.10.20.0 255.255.255.0 10.10.10.2
+    end
+    write memory
+Здесь мы говорим: «Для сети 10.10.20.0/24 используйте следующий-hop 10.10.10.2 (R2)».
+
+На R3:
+    enable
+    configure terminal
+    ip route 10.10.10.0 255.255.255.0 10.10.20.1
+    end
+    write memory
+Проверка таблицы маршрутизации
+На R1 и R3 выполните:
+    show ip route
+        Вы должны увидеть:
+            C — Connected (прямо подключённые сети).
+            S — Static (написанные вручную).
+
+            Пример на R1:
+                S 10.10.20.0/24 [1/0] via 10.10.10.2
+                C 10.10.10.0/24 is directly connected, FastEthernet0/0

@@ -1,0 +1,31 @@
+Apr 17 11:20:56.290 HYPERVISOR: Release 0.2.23-amd64/Linux (tag 2023010200)
+Apr 17 11:20:56.290 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 46255.
+Apr 17 11:20:56.298 HYPERVISOR: exec_cmd: hypervisor version 
+Apr 17 11:20:56.298 HYPERVISOR: exec_cmd: hypervisor working_dir /home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/StaticRouting/project-files/dynamips 
+Apr 17 11:20:56.298 GENERAL: working_dir=/home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/StaticRouting/project-files/dynamips
+Apr 17 11:20:56.298 HYPERVISOR: exec_cmd: hypervisor working_dir /home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/StaticRouting/project-files/dynamips/809ee263-0f48-40dd-b730-ade78fc7893c 
+Apr 17 11:20:56.298 GENERAL: working_dir=/home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/StaticRouting/project-files/dynamips/809ee263-0f48-40dd-b730-ade78fc7893c
+Apr 17 11:20:56.299 HYPERVISOR: exec_cmd: vm create R2 2 c3745 
+Apr 17 11:20:56.299 VM: VM R2 created.
+Apr 17 11:20:56.299 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 5001 
+Apr 17 11:20:56.299 HYPERVISOR: exec_cmd: c3745 get_mac_addr R2 
+Apr 17 11:20:56.300 HYPERVISOR: exec_cmd: vm set_disk0 R2 0 
+Apr 17 11:20:56.300 HYPERVISOR: exec_cmd: vm set_ios R2 /home/muhammad/GNS3/images/IOS/c3745-adventerprisek9-mz.124-25.image 
+Apr 17 11:20:56.301 HYPERVISOR: exec_cmd: c3745 set_mac_addr R2 c402.390e.0000 
+Apr 17 11:20:56.301 HYPERVISOR: exec_cmd: vm set_nvram R2 256 
+Apr 17 11:20:56.301 HYPERVISOR: exec_cmd: vm set_ram R2 256 
+Apr 17 11:20:56.653 HYPERVISOR: exec_cmd: nio create_udp udp-b02d080e-9a1e-47d5-b890-947d97027096 10004 127.0.0.1 10005 
+Apr 17 11:20:56.869 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 0 udp-b02d080e-9a1e-47d5-b890-947d97027096 
+Apr 17 11:20:56.869 HYPERVISOR: exec_cmd: vm get_status R2 
+Apr 17 11:20:56.942 HYPERVISOR: exec_cmd: nio create_udp udp-a8a86205-7f03-4b4e-a076-16a82e14df11 10008 127.0.0.1 10009 
+Apr 17 11:20:56.945 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 1 udp-a8a86205-7f03-4b4e-a076-16a82e14df11 
+Apr 17 11:20:56.945 HYPERVISOR: exec_cmd: vm get_status R2 
+Apr 17 11:21:01.326 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Apr 17 11:21:01.328 HYPERVISOR: exec_cmd: vm set_ghost_file R2 /home/muhammad/school.21/CbS2_Networking_basics_Part_2.ID_1521089-1/src/StaticRouting/project-files/dynamips/c3745-adventerprisek9-mz.124-25.image-256.ghost 
+Apr 17 11:21:01.329 HYPERVISOR: exec_cmd: vm get_status R2 
+Apr 17 11:21:01.330 HYPERVISOR: exec_cmd: vm set_config R2 configs/i2_startup-config.cfg 
+Apr 17 11:21:01.330 HYPERVISOR: exec_cmd: vm start R2 
+Apr 17 11:22:16.985 HYPERVISOR: Stopped.
+Apr 17 11:22:17.113 VM: VM R2 shutdown.
+Apr 17 11:22:17.113 VM: VM R2 destroyed.
+Apr 17 11:22:17.113 GENERAL: reset done.
